@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#dae2fd",
+                    "background": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#d3e4fe",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#0b1c30",
+                    "surface": "#f7f9fb",
+                    "primary": "#000000",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary-container": "#00714d",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "outline-variant": "#c6c6cd",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "primary-fixed-dim": "#bec6e0",
+                    "secondary": "#006c49",
+                    "inverse-surface": "#2d3133",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#565e74",
+                    "on-primary-container": "#7c839b",
+                    "inverse-primary": "#bec6e0",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary": "#000000",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f7f9fb",
+                    "outline": "#76777d",
+                    "surface-dim": "#d8dadc",
+                    "secondary-container": "#6cf8bb",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-surface": "#191c1e",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-container": "#eceef0",
+                    "primary-container": "#131b2e",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-fixed": "#002113",
+                    "on-tertiary-container": "#75859d",
+                    "on-surface-variant": "#45464d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "1.5rem",
+                    "section-gap": "8rem",
+                    "margin-desktop": "5rem",
+                    "gutter": "2rem",
+                    "stack-sm": "0.5rem",
+                    "stack-md": "1.5rem",
+                    "stack-lg": "3rem"
+            },
+            "fontFamily": {
+                    "label-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Playfair Display"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display": ["Playfair Display"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                    "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .sidebar-active {
+            color: #006c49;
+            font-weight: 700;
+            background-color: rgba(0, 108, 73, 0.05);
+            border-right-width: 4px;
+            border-color: #006c49;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-margin-desktop h-16 bg-white/90 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center gap-4">
+<span class="font-display text-headline-sm font-bold text-primary">Jader Mendez</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex relative">
+<input class="bg-surface-container border-none rounded-lg px-4 py-2 text-label-md w-64 focus:ring-1 focus:ring-secondary" placeholder="Buscar comentarios..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-on-surface-variant">search</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary hover:text-secondary cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-primary hover:text-secondary cursor-pointer" data-icon="help">help</span>
+<img alt="Avatar del Administrador" class="w-8 h-8 rounded-full border border-primary/10" data-alt="A professional close-up portrait of a male administrator in a brightly lit, modern minimalist office environment. The lighting is soft and even, highlighting clear skin and a focused, professional expression. The background is slightly blurred with soft grey and white tones, reflecting a corporate and high-tech atmosphere consistent with a luxury brand's aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP2mNxTmiaD6zfZIMRdj_LUuK1Immz0e6Av4q9T_cEub0AGXTwYQ9g7ZdKBj2ySDPdQpNTX665DgKZJJxfuG09VclMgxSFsPVFXNWO3RGFE7khaGN2_hbLjTUlRTl3H2r_-P8LN-RKzmaXfBXuM7tq7TOBzHSTWiKKo6-vbGOLfoL3GsYWBSbv4frou9yGtZXidgjmzIKwn8uZ0Hjgnjrk5-bcXkXtaG2SMXXRYJloc1K6rY7xPhwL-MILri9uF9CD27GgPeF5pKA"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 pt-20 pb-8 px-4 bg-surface border-r border-primary/10 hidden md:flex flex-col">
+<div class="mb-10 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div>
+<h2 class="font-display text-label-lg font-bold text-primary">C.E.T.D.</h2>
+<p class="text-label-md text-on-surface-variant">Jader Mendez</p>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg">Resumen</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary" data-icon="perm_media">perm_media</span>
+<span class="font-label-lg">Contenido</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 sidebar-active transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="forum" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span class="font-label-lg">Comentarios</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary" data-icon="settings">settings</span>
+<span class="font-label-lg">Configuración</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-64 pt-24 px-6 md:px-12 pb-20">
+<!-- Page Header & Stats Bento Grid -->
+<header class="mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Moderación de Comentarios</h1>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Stat Card 1 -->
+<div class="bg-white p-6 rounded-xl border border-primary/10 shadow-sm flex flex-col justify-between">
+<div>
+<span class="text-label-md uppercase tracking-wider text-on-surface-variant mb-2 block">Total Comentarios</span>
+<div class="text-headline-md font-bold">1,284</div>
+</div>
+<div class="mt-4 flex items-center text-secondary text-label-md">
+<span class="material-symbols-outlined mr-1 text-[18px]">trending_up</span>
+<span>+12% vs ayer</span>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-white p-6 rounded-xl border border-primary/10 shadow-sm flex flex-col justify-between">
+<div>
+<span class="text-label-md uppercase tracking-wider text-on-surface-variant mb-2 block">Reacciones Hoy</span>
+<div class="text-headline-md font-bold">452</div>
+</div>
+<div class="mt-4 flex items-center text-secondary text-label-md">
+<span class="material-symbols-outlined mr-1 text-[18px]">favorite</span>
+<span>Compromiso alto</span>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-white p-6 rounded-xl border border-primary/10 shadow-sm flex flex-col justify-between md:col-span-2">
+<div>
+<span class="text-label-md uppercase tracking-wider text-on-surface-variant mb-2 block">Estado de la Comunidad</span>
+<div class="flex items-center gap-4 mt-2">
+<div class="h-2 flex-grow bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[85%]"></div>
+</div>
+<span class="font-label-lg">85% Positivo</span>
+</div>
+<p class="text-label-md text-on-surface-variant mt-4">La mayoría de los comentarios hoy son constructivos y se centran en el último portafolio publicado.</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Moderation List -->
+<section class="space-y-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-sm text-headline-sm">Recientes</h3>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-primary text-white text-label-lg rounded-lg hover:bg-secondary transition-colors">Todos</button>
+<button class="px-4 py-2 bg-white border border-primary/10 text-on-surface-variant text-label-lg rounded-lg hover:bg-surface-container-high transition-colors">Pendientes</button>
+<button class="px-4 py-2 bg-white border border-primary/10 text-on-surface-variant text-label-lg rounded-lg hover:bg-surface-container-high transition-colors">Spam</button>
+</div>
+</div>
+<!-- Comment Card 1 -->
+<article class="bg-white rounded-xl border border-primary/10 p-6 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow duration-300">
+<div class="flex-shrink-0">
+<img alt="Carlos Ruiz" class="w-12 h-12 rounded-full border border-primary/5" data-alt="A detailed headshot of a middle-aged creative professional with glasses and a friendly smile. The background is a crisp white minimalist wall with a single piece of architectural line art. High-key natural lighting creates a clean, sophisticated look consistent with a high-end corporate portfolio aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiAIOK3PIFYaZN-1jD5AOa5f7cLFQ9AWSAA7ZdHMn8Zm0tiRaakZEBzP7cP-mQNYQBN1A2Ai3yQrMKDoywAIxiLu1NF1wtakmiutY4JPqHRkxanG8h0X_yE1CRIac_WJqPYtx9X_oDPWzU27FbnGRUEYCgkFG8ndAhWiq_Wv6k56O8GbIy8AR5L4kcRmxUWFzAT99WtIXOCSDkod_kMI6xP_xteIek237mIZYZrxXD1JLnLU9CkEqVwRpfzngeejJPP9-EWTsDF4M"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-headline-sm text-[18px]">Carlos Ruiz</h4>
+<span class="text-label-md text-on-surface-variant">Hace 15 minutos • En: <span class="text-primary font-bold">Proyecto Minimalismo</span></span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-label-md">14</span>
+</div>
+</div>
+</div>
+<p class="text-body-md text-on-surface mb-4">
+                        Increíble el manejo de los espacios negativos en esta pieza. Realmente transmite esa sensación de autoridad y calma que mencionas en el editorial. ¿Planeas hacer una serie sobre esto?
+                    </p>
+<div class="flex flex-wrap gap-4 items-center pt-4 border-t border-primary/5">
+<button class="flex items-center gap-2 text-label-lg text-secondary hover:underline group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">reply</span>
+                            Responder
+                        </button>
+<button class="flex items-center gap-2 text-label-lg text-primary hover:underline group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">check_circle</span>
+                            Aprobar
+                        </button>
+<button class="flex items-center gap-2 text-label-lg text-error hover:underline group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">delete</span>
+                            Eliminar
+                        </button>
+<div class="ml-auto flex gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-label-md text-on-surface-variant">Activo ahora</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Comment Card 2 -->
+<article class="bg-white rounded-xl border border-primary/10 p-6 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow duration-300">
+<div class="flex-shrink-0">
+<img alt="Elena Marín" class="w-12 h-12 rounded-full border border-primary/5" data-alt="A close-up portrait of a young woman with a calm, intelligent expression, styled as a creative analyst. The lighting is focused and warm, suggesting an indoor evening setting in a modern architectural space. The color palette is muted with deep greens and warm whites, aligning with an authoritative yet modern brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx_UOwgOvbtwumDKMitFXkOI6Ana9yad4RtizHFvuNBtNARNfi6sMLmppJG9HBQvoAvihuSQgR8EwJwJ8xyX0fkI4bZIpMFKM1k6qF-I9mGX6nkT9WcgR1SkKIt1DlWJJ6bg2luqhmaz7hTP6TJBintLMwo4nXyCUfFVJRPjL-R2fd7fW_aSAKcRXfGn34o1VtRYRjDgSXepzmtsXdfMIZGi_HsbU_RMarS6ZozUtMdg_lF4OpsH7qIA2d5kaCgYwwN1dSk2GWS7g"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-headline-sm text-[18px]">Elena Marín</h4>
+<span class="text-label-md text-on-surface-variant">Hace 2 horas • En: <span class="text-primary font-bold">Reflexiones de Diseño</span></span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span class="text-label-md">8</span>
+</div>
+</div>
+</div>
+<p class="text-body-md text-on-surface mb-4">
+                        Me encantó la parte donde hablas sobre la tipografía como ancla visual. Es algo que a menudo se pasa por alto pero define toda la jerarquía de una página.
+                    </p>
+<div class="flex flex-wrap gap-4 items-center pt-4 border-t border-primary/5">
+<button class="flex items-center gap-2 text-label-lg text-secondary hover:underline group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">reply</span>
+                            Responder
+                        </button>
+<button class="flex items-center gap-2 text-label-lg text-primary hover:underline group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">check_circle</span>
+                            Aprobar
+                        </button>
+<button class="flex items-center gap-2 text-label-lg text-error hover:underline group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">delete</span>
+                            Eliminar
+                        </button>
+</div>
+</div>
+</article>
+<!-- Comment Card 3 (Suspicious/Spam Look) -->
+<article class="bg-surface-container-low/50 rounded-xl border border-error/20 p-6 flex flex-col md:flex-row gap-6">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-headline-sm text-[18px]">Usuario_992</h4>
+<span class="text-label-md text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">report</span>
+                                Posible Spam • Hace 5 horas
+                            </span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant italic mb-4">
+                        "¡Visita mi sitio para ganar seguidores gratis! Click aquí bit.ly/spam-link"
+                    </p>
+<div class="flex flex-wrap gap-4 items-center pt-4 border-t border-primary/5">
+<button class="flex items-center gap-2 text-label-lg text-error font-bold hover:bg-error/10 px-4 py-2 rounded transition-colors group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">block</span>
+                            Bloquear Usuario
+                        </button>
+<button class="flex items-center gap-2 text-label-lg text-on-surface-variant hover:underline group">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform">delete</span>
+                            Eliminar permanentemente
+                        </button>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination -->
+<footer class="mt-section-gap flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center border border-primary/10 rounded-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg font-label-lg">1</button>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high rounded-lg font-label-lg transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-high rounded-lg font-label-lg transition-all">3</button>
+</div>
+<button class="w-10 h-10 flex items-center justify-center border border-primary/10 rounded-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</footer>
+</main>
+<!-- Contextual FAB - Only for specific dashboard actions -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-secondary text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-40 group">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_comment</span>
+<span class="absolute right-full mr-4 bg-primary text-white text-label-lg px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Nota Rápida</span>
+</button>
+<script>
+        // Simple Micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Flash feedback for actions
+                if (this.innerText.includes('Aprobar')) {
+                    const card = this.closest('article');
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '0.5';
+                    card.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        card.style.border = '1px solid #006c49';
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                        this.innerHTML = '<span class="material-symbols-outlined">done_all</span> Aprobado';
+                        this.classList.remove('text-primary');
+                        this.classList.add('text-secondary');
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body></html>

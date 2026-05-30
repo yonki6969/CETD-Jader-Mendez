@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soporte y Ayuda | Academia Deportiva</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#00714d",
+                "surface-dim": "#d8dadc",
+                "tertiary-fixed-dim": "#b7c8e1",
+                "tertiary-container": "#0b1c30",
+                "surface": "#f7f9fb",
+                "primary-fixed-dim": "#bec6e0",
+                "primary-fixed": "#dae2fd",
+                "on-primary-fixed-variant": "#3f465c",
+                "on-error-container": "#93000a",
+                "tertiary-fixed": "#d3e4fe",
+                "secondary-fixed-dim": "#4edea3",
+                "primary-container": "#131b2e",
+                "on-secondary": "#ffffff",
+                "error-container": "#ffdad6",
+                "background": "#f7f9fb",
+                "surface-variant": "#e0e3e5",
+                "inverse-surface": "#2d3133",
+                "on-surface-variant": "#45464d",
+                "surface-container-highest": "#e0e3e5",
+                "on-tertiary-fixed": "#0b1c30",
+                "surface-container-high": "#e6e8ea",
+                "on-primary-fixed": "#131b2e",
+                "error": "#ba1a1a",
+                "secondary-container": "#6cf8bb",
+                "on-tertiary": "#ffffff",
+                "outline": "#76777d",
+                "on-background": "#191c1e",
+                "primary": "#000000",
+                "secondary": "#006c49",
+                "outline-variant": "#c6c6cd",
+                "surface-container-low": "#f2f4f6",
+                "on-secondary-fixed": "#002113",
+                "inverse-primary": "#bec6e0",
+                "inverse-on-surface": "#eff1f3",
+                "on-surface": "#191c1e",
+                "tertiary": "#000000",
+                "surface-bright": "#f7f9fb",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-container": "#7c839b",
+                "on-tertiary-container": "#75859d",
+                "secondary-fixed": "#6ffbbe",
+                "on-tertiary-fixed-variant": "#38485d",
+                "surface-container": "#eceef0",
+                "on-error": "#ffffff",
+                "surface-tint": "#565e74",
+                "on-secondary-fixed-variant": "#005236"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "stack-lg": "3rem",
+                "gutter": "2rem",
+                "stack-md": "1.5rem",
+                "margin-mobile": "1.5rem",
+                "stack-sm": "0.5rem",
+                "section-gap": "8rem",
+                "margin-desktop": "5rem"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Playfair Display"],
+                "headline-sm": ["Playfair Display"],
+                "label-lg": ["Hanken Grotesk"],
+                "body-md": ["Hanken Grotesk"],
+                "headline-md": ["Playfair Display"],
+                "label-md": ["Hanken Grotesk"],
+                "headline-lg": ["Playfair Display"],
+                "display": ["Playfair Display"],
+                "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #f7f9fb; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .faq-item[open] .faq-icon { transform: rotate(180deg); }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full bg-surface/90 backdrop-blur-md z-50 border-b border-primary/10">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Academia Deportiva" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCryVhq16_nZYaBV-icbXizR86shoMi0AT3LtjKnZ7tMBgbS2jxYrmRfQ3NjBNBT_aoEFINYnS0EA5_Dav5ldNvwv52QDw9Sz3jcuYZREYp7D4L2o_J4CpNjIBZavCVXrmOI1wNMw3EYp_LFdRNq1VnuVD-Py0wFOUR6dWyXprKrEl1VzGXPGFAbr8wZfJ2EbldvGubWeL1en7XJv6FfMuTyt25hQ2SCFCwbok7LZHl11ti44C9LdX63K6CwiAMSjIEuKWbS4OW9_o"/>
+<span class="font-display text-headline-sm font-bold text-primary">Academia Deportiva</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="#">Programas</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="#">Entrenamientos</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="#">Calendario</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="#">Noticias</a>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-lg text-label-lg transition-all active:opacity-70 hover:bg-secondary">Acceso Alumnos</button>
+</nav>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</header>
+<main class="mt-24">
+<!-- Hero Section -->
+<section class="px-margin-desktop py-section-gap max-w-[1280px] mx-auto text-center">
+<div class="max-w-3xl mx-auto">
+<span class="font-label-lg text-label-lg uppercase text-secondary tracking-widest mb-4 block">C.E.T.D. Jader Mendez</span>
+<h1 class="font-display text-headline-lg md:text-display text-primary mb-stack-md">Centro de Soporte y Ayuda</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Estamos comprometidos con tu excelencia deportiva y académica. Encuentra respuestas rápidas a tus dudas o comunícate directamente con nuestro equipo técnico para una asistencia personalizada.
+                </p>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-container-lowest py-section-gap border-y border-primary/5">
+<div class="px-margin-desktop max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm italic">Resolución de Dudas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Consulta nuestras guías rápidas clasificadas por áreas operativas.</p>
+</div>
+<div class="md:col-span-8 space-y-stack-md">
+<!-- Category: Inscripciones -->
+<div class="border-b border-outline-variant pb-stack-md">
+<h3 class="font-label-lg text-label-lg text-secondary mb-stack-md uppercase">Inscripciones</h3>
+<details class="faq-item group cursor-pointer py-4">
+<summary class="flex justify-between items-center list-none">
+<span class="font-headline-sm text-headline-sm text-primary">¿Cuáles son los requisitos para nuevos ingresos?</span>
+<span class="faq-icon material-symbols-outlined transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="mt-4 font-body-md text-body-md text-on-surface-variant">
+                                    Es necesario presentar el certificado médico de aptitud física, copia de documento de identidad y el formulario de registro firmado por el tutor legal.
+                                </div>
+</details>
+</div>
+<!-- Category: Plataforma -->
+<div class="border-b border-outline-variant pb-stack-md">
+<h3 class="font-label-lg text-label-lg text-secondary mb-stack-md uppercase">Plataforma Académica</h3>
+<details class="faq-item group cursor-pointer py-4">
+<summary class="flex justify-between items-center list-none">
+<span class="font-headline-sm text-headline-sm text-primary">¿Cómo recupero mi acceso de alumno?</span>
+<span class="faq-icon material-symbols-outlined transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="mt-4 font-body-md text-body-md text-on-surface-variant">
+                                    Dirígete a la sección de Acceso Alumnos y selecciona "Olvidé mi contraseña". Recibirás un enlace de restauración en el correo institucional registrado.
+                                </div>
+</details>
+</div>
+<!-- Category: Eventos -->
+<div class="pb-stack-md">
+<h3 class="font-label-lg text-label-lg text-secondary mb-stack-md uppercase">Eventos</h3>
+<details class="faq-item group cursor-pointer py-4">
+<summary class="flex justify-between items-center list-none">
+<span class="font-headline-sm text-headline-sm text-primary">¿Dónde puedo ver el calendario de competiciones?</span>
+<span class="faq-icon material-symbols-outlined transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="mt-4 font-body-md text-body-md text-on-surface-variant">
+                                    El calendario se actualiza mensualmente en la sección "Calendario" de nuestro menú principal y se envía vía newsletter a todos los inscritos.
+                                </div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-margin-desktop py-section-gap max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Support Form -->
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Soporte Web</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Nombre Completo</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:border-secondary focus:ring-0 transition-colors" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Correo Electrónico</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:border-secondary focus:ring-0 transition-colors" placeholder="juan@ejemplo.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Asunto</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:border-secondary focus:ring-0 transition-colors" placeholder="Breve descripción del problema" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Mensaje</label>
+<textarea class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:border-secondary focus:ring-0 transition-colors resize-none" placeholder="Explícanos tu situación detalladamente..." rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary px-10 py-4 font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all" type="submit">Enviar Consulta</button>
+</form>
+</div>
+<!-- Instant Access & Info -->
+<div class="flex flex-col justify-center bg-surface-container-low p-10 md:p-16 border border-primary/5">
+<div class="mb-12">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Resolución Inmediata</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Para problemas críticos con la plataforma o inscripciones urgentes, contacta directamente con nuestro equipo de guardia.</p>
+<a class="inline-flex items-center gap-3 bg-secondary text-on-secondary px-8 py-4 font-label-lg text-label-lg uppercase tracking-widest hover:opacity-90 transition-all shadow-lg shadow-secondary/20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            Chatear con Soporte Técnico
+                        </a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12 border-t border-outline-variant">
+<div>
+<span class="material-symbols-outlined text-secondary mb-2">schedule</span>
+<h4 class="font-label-lg text-label-lg text-primary uppercase mb-1">Horario de Atención</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lun - Vie: 08:00 - 18:00<br/>Sáb: 09:00 - 13:00</p>
+</div>
+<div>
+<span class="material-symbols-outlined text-secondary mb-2">mail</span>
+<h4 class="font-label-lg text-label-lg text-primary uppercase mb-1">Correo Directo</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">soporte@jadermendez.edu<br/>ayuda@jadermendez.edu</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Decorative Image Section -->
+<section class="relative h-[400px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-primary/40 z-10 flex items-center justify-center">
+<div class="text-center px-4">
+<h2 class="font-display text-headline-lg text-white italic">"Excelencia en el alto rendimiento."</h2>
+</div>
+</div>
+<img class="w-full h-full object-cover" data-alt="A clean, high-end athletic training facility with professional equipment, bathed in soft, bright morning light coming through large industrial windows. The aesthetic is modern and minimalist, featuring a cool blue and white color palette that conveys professional discipline and focus. The composition is expansive, showcasing the generous space and high-tech environment of an elite sports academy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzOaEYtrbR9FEA6L9HKP02tiJGoumU6wtVX89vzwp4uDqiTSjXReQhAPDnzRNQZHWa3aET45mH2AFG_hM2Fe40Ea3hX_NbVzH-GZuQb3b4vfQ0vkgM4nqPTbWSVrwL5i1Z9JqvI5Gr6sLzC5JAm_QJuIl0GwpYJXoqzwK6cZzzaxUjuQiXtl2Njw3JW7BeMa3mlKFB2ddtFfj07_YuF8QxSbZ080sf0jeNcLZ0rzSPeAaSRgT-ItBC7BR86vdqr0ZqXrisotYDe30"/>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface w-full mt-section-gap border-t border-primary/10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-stack-lg max-w-[1280px] mx-auto">
+<div class="md:col-span-4">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCryVhq16_nZYaBV-icbXizR86shoMi0AT3LtjKnZ7tMBgbS2jxYrmRfQ3NjBNBT_aoEFINYnS0EA5_Dav5ldNvwv52QDw9Sz3jcuYZREYp7D4L2o_J4CpNjIBZavCVXrmOI1wNMw3EYp_LFdRNq1VnuVD-Py0wFOUR6dWyXprKrEl1VzGXPGFAbr8wZfJ2EbldvGubWeL1en7XJv6FfMuTyt25hQ2SCFCwbok7LZHl11ti44C9LdX63K6CwiAMSjIEuKWbS4OW9_o"/>
+<span class="font-display text-headline-sm font-bold text-primary">Academia Deportiva</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Centro de Excelencia en Tecnificación Deportiva Jader Mendez.</p>
+</div>
+<div class="md:col-span-4 grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Términos de Uso</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Mapa del Sitio</a>
+<a class="font-body-md text-body-md text-secondary font-bold transition-all" href="#">Soporte</a>
+</div>
+</div>
+<div class="md:col-span-4 text-left md:text-right flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Academia Deportiva.<br/>Excelencia en el alto rendimiento.</p>
+<div class="flex md:justify-end gap-4 mt-4">
+<span class="material-symbols-outlined text-primary-container cursor-pointer hover:text-secondary">share</span>
+<span class="material-symbols-outlined text-primary-container cursor-pointer hover:text-secondary">contact_support</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for nav links if needed
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

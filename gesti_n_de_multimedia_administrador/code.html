@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dae2fd",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#0b1c30",
+                        "surface": "#f7f9fb",
+                        "primary": "#000000",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-container": "#00714d",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "outline-variant": "#c6c6cd",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary": "#006c49",
+                        "inverse-surface": "#2d3133",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#565e74",
+                        "on-primary-container": "#7c839b",
+                        "inverse-primary": "#bec6e0",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary": "#000000",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#76777d",
+                        "surface-dim": "#d8dadc",
+                        "secondary-container": "#6cf8bb",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-surface": "#191c1e",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary-fixed-variant": "#005236",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#131b2e",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-fixed": "#002113",
+                        "on-tertiary-container": "#75859d",
+                        "on-surface-variant": "#45464d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1.5rem",
+                        "section-gap": "8rem",
+                        "margin-desktop": "5rem",
+                        "gutter": "2rem",
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1.5rem",
+                        "stack-lg": "3rem"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #f7f9fb; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .drag-over {
+            border-color: #006c49 !important;
+            background-color: rgba(0, 108, 73, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-white/90 dark:bg-surface-container/90 backdrop-blur-md border-b border-primary/10 dark:border-white/10">
+<div class="flex items-center gap-8">
+<span class="font-display text-headline-sm font-bold text-primary dark:text-inverse-primary">Jader Mendez</span>
+<nav class="hidden md:flex gap-6">
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Resumen</a>
+<a class="font-label-lg text-label-lg text-primary dark:text-inverse-primary font-bold border-b-2 border-secondary hover:text-secondary transition-colors duration-200" href="#">Contenido</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Comentarios</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Configuración</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container rounded-full px-4 py-1.5 gap-2 border border-outline/10">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-md font-label-md w-48" placeholder="Buscar archivos..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-primary p-2 scale-95 active:scale-90 transition-transform" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-primary p-2 scale-95 active:scale-90 transition-transform" data-icon="help">help</button>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden border border-outline/20">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="person">person</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-20 pb-8 px-4 bg-surface dark:bg-surface-container-low border-r border-primary/10 dark:border-white/10 w-64 hidden md:flex z-40">
+<div class="flex flex-col items-center mb-10 px-4">
+<div class="w-16 h-16 rounded-xl bg-primary flex items-center justify-center mb-3">
+<span class="text-white font-display font-bold text-headline-sm">C.E.</span>
+</div>
+<h2 class="font-display text-headline-sm text-primary dark:text-inverse-primary">C.E.T.D.</h2>
+<p class="font-body-md text-label-md text-on-surface-variant">Jader Mendez</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Resumen</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim font-bold bg-secondary/5 border-r-4 border-secondary translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="perm_media">perm_media</span>
+<span class="font-label-lg text-label-lg">Contenido</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-label-lg text-label-lg">Comentarios</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg text-label-lg">Configuración</span>
+</a>
+</nav>
+<div class="px-4 py-4 mt-auto">
+<button class="w-full flex items-center gap-3 px-4 py-3 text-error rounded-lg hover:bg-error/5 transition-all">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-lg text-label-lg">Cerrar Sesión</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-64 pt-24 px-margin-mobile md:px-margin-desktop pb-20">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg mb-2">Multimedia</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Gestiona el catálogo visual del Centro de Entrenamiento Técnico Deportivo. Sube nuevos registros de actividades y partidos.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-6 py-3 rounded shadow-sm hover:opacity-90 transition-opacity flex items-center gap-2 font-label-lg text-label-lg">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    NUEVA CARPETA
+                </button>
+</div>
+</div>
+<!-- Upload Zone -->
+<section class="mb-section-gap">
+<div class="relative group cursor-pointer border-2 border-dashed border-outline-variant bg-white rounded-xl p-12 transition-all duration-300 hover:border-secondary flex flex-col items-center justify-center text-center" id="drop-zone">
+<input class="absolute inset-0 opacity-0 cursor-pointer" id="file-input" multiple="" type="file"/>
+<div class="w-16 h-16 rounded-full bg-secondary-container/30 flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Arrastra y suelta tus archivos aquí</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Soporta imágenes (JPG, PNG) y videos (MP4, MOV) hasta 100MB</p>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-lg font-label-lg text-label-lg hover:shadow-lg transition-shadow">
+                    SELECCIONAR ARCHIVOS
+                </button>
+</div>
+</section>
+<!-- Gallery Controls -->
+<div class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+<div class="flex items-center gap-2 p-1 bg-surface-container rounded-lg border border-outline/10">
+<button class="px-6 py-2 rounded-md font-label-lg text-label-lg bg-white shadow-sm text-primary transition-all">Todos</button>
+<button class="px-6 py-2 rounded-md font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-all">Fotos</button>
+<button class="px-6 py-2 rounded-md font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-all">Videos</button>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-md text-label-md text-on-surface-variant">Ordenar por:</span>
+<select class="bg-transparent border-none font-label-lg text-label-lg text-primary focus:ring-0 cursor-pointer">
+<option>Más recientes</option>
+<option>Más antiguos</option>
+<option>Nombre A-Z</option>
+</select>
+</div>
+</div>
+<!-- Portfolio Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded bg-white border border-primary/10 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)]">
+<div class="aspect-video overflow-hidden">
+<img alt="Cancha" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide-angle, high-resolution shot of a professional indoor sports court under bright, even lighting. The polished wood floor reflects the overhead lights, creating a clean, modern atmosphere. The perspective is from the baseline, looking toward the center of the court. The color palette is dominated by warm wood tones and pristine white markings, reflecting a high-end corporate athletic facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTjQFmUeDY5z6XD8ieTnURrOW4TSJKt5Y4yge6blq_DV97Ke1XL4PazQHTWdGn2hzjG3jagqtWw2YL4rhrNkQ8NDmtpTcZsn-mKh8f3EDot43-l37GF4K8C0UBSLDwkqUz6q1GjU4tlE35-En0NtaJwrFTtIeKc5L-5oEVlGMxsO19goy_2Hisniht-tr13OLrTplnWhmJfa0SB8mtTbBOvJgIBneleVRQKr8_amLkBTO8F8iz9fc8HNElgRQwJVqNWVCvKGR8Iyo"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-lg text-label-lg text-secondary">FOTO • SEPTIEMBRE 2023</span>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Cancha Principal - Sesión Nocturna</h4>
+</div>
+</div>
+<!-- Square Card -->
+<div class="md:col-span-4 group relative overflow-hidden rounded bg-white border border-primary/10 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)]">
+<div class="aspect-square overflow-hidden relative">
+<img alt="Futbol Sala" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An action-packed close-up of a futsal game in progress, capturing the dynamic movement of the ball and players' feet on a blue synthetic court. The lighting is dramatic and focused, highlighting the textures of the sports equipment. The overall aesthetic is professional and athletic, with a palette of deep blues and emerald greens that aligns with a modern sports training center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaZXaPj5QlshuJ8q1aldANsxU7XejT5wbopCtFQEhElSjpoTRAqLBMDMBVeknH4MfB8lhv61LVNjLdm71cfwoZvCGOqJxr0OdE_auno0_TpxV1aUqUm-OUZwbUkZtk3DGjSskp-jOJ8i480MNw5JgfNyq-vQczvzf3nIcsHYcP196q-tm1kKN3vNwE4VbB6XwNdFcI_VWvBCU5rLCRUg2z9KXJ5VICGLprAWPtZvKXBE-M4PPentEXOL5BMkWeGW-00ZtcxzkP1w0"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-5xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-lg text-label-lg text-secondary">VIDEO • AGOSTO 2023</span>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Torneo Relámpago U-18</h4>
+</div>
+</div>
+<!-- Generic Multi-grid Item 1 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded bg-white border border-primary/10 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)]">
+<div class="aspect-video bg-surface-container flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 flex flex-col items-center justify-center p-8 text-center">
+<span class="material-symbols-outlined text-primary/20 text-6xl mb-4" data-icon="image">image</span>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Vista previa no disponible</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-lg text-label-lg text-secondary">FOTO • OCTUBRE 2023</span>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Inauguración Gradas Norte</h4>
+</div>
+</div>
+<!-- Generic Multi-grid Item 2 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded bg-white border border-primary/10 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)]">
+<div class="aspect-video bg-surface-container flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-gradient-to-tr from-secondary/5 to-tertiary/5 flex flex-col items-center justify-center p-8 text-center">
+<span class="material-symbols-outlined text-primary/20 text-6xl mb-4" data-icon="videocam">videocam</span>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Procesando video...</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-lg text-label-lg text-secondary">VIDEO • OCTUBRE 2023</span>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Entrevista Coach Principal</h4>
+</div>
+</div>
+<!-- Generic Multi-grid Item 3 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded bg-white border border-primary/10 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)]">
+<div class="aspect-video bg-surface-container flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-gradient-to-b from-primary/5 to-surface-container flex flex-col items-center justify-center p-8 text-center">
+<span class="material-symbols-outlined text-primary/20 text-6xl mb-4" data-icon="analytics">analytics</span>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Análisis táctico v2.0</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-lg text-label-lg text-secondary">OTRO • NOVIEMBRE 2023</span>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Reporte Visual de Rendimiento</h4>
+</div>
+</div>
+</div>
+</main>
+<script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.classList.add('drag-over');
+        }
+
+        function unhighlight(e) {
+            dropZone.classList.remove('drag-over');
+        }
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            console.log('Archivos recibidos:', files);
+            alert(`${files.length} archivos preparados para subir. (Simulación de sistema)`);
+        }
+
+        fileInput.addEventListener('change', function() {
+            handleFiles(this.files);
+        });
+    </script>
+</body></html>

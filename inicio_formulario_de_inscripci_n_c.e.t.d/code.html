@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>C.E.T.D. "Jader Mendez" | Complejo Educativo de Talento Deportivo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#bec6e0",
+                      "background": "#f7f9fb",
+                      "secondary-fixed": "#6ffbbe",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "on-primary-container": "#7c839b",
+                      "tertiary-container": "#0b1c30",
+                      "surface-variant": "#e0e3e5",
+                      "error": "#ba1a1a",
+                      "on-surface": "#191c1e",
+                      "surface-bright": "#f7f9fb",
+                      "primary-container": "#131b2e",
+                      "tertiary": "#d32f2f",
+                      "on-secondary-fixed": "#002113",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "surface-dim": "#d8dadc",
+                      "surface-tint": "#1976d2",
+                      "inverse-primary": "#bec6e0",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-background": "#191c1e",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#d3e4fe",
+                      "surface-container-low": "#f2f4f6",
+                      "on-primary-fixed": "#131b2e",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "surface-container": "#eceef0",
+                      "secondary-fixed-dim": "#4edea3",
+                      "secondary-container": "#e8f5e9",
+                      "primary": "#0d47a1",
+                      "on-secondary-container": "#00714d",
+                      "outline": "#76777d",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "primary-fixed": "#dae2fd",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#45464d",
+                      "on-tertiary-container": "#75859d",
+                      "surface": "#f7f9fb",
+                      "on-secondary-fixed-variant": "#005236",
+                      "secondary": "#2e7d32",
+                      "outline-variant": "#c6c6cd",
+                      "surface-container-high": "#e6e8ea"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "1.5rem",
+                      "margin-desktop": "5rem",
+                      "stack-md": "1.5rem",
+                      "stack-sm": "0.5rem",
+                      "gutter": "2rem",
+                      "stack-lg": "3rem",
+                      "section-gap": "8rem"
+              },
+              "fontFamily": {
+                      "label-lg": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "label-md": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"],
+                      "display": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            color: #191c1e;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .calendar-cell {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Hanken Grotesk', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .calendar-cell.has-event {
+            background-color: #0d47a1;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .calendar-cell.has-event:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(13, 71, 161, 0.2);
+        }
+        .event-detail-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-primary/10">
+<div class="flex justify-between items-center h-24 px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+<a class="flex items-center gap-3" href="#">
+<img alt="Logo C.E.T.D. Jader Mendez" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASpQWR2FfSKcuxO8kkikw-0fTbMI1gLKqf29Ibcg7PU9Bbv3EIA8oEqXCux8YSNt4gcP6QJrgsGjKOGZKabBn1YQ2ZIxB-ckqvpQOlEuFwmieIx_SUclDs7fBkAHm5aF57UzsI3-yA_p6OJebsq4IG68LG1ZxlrZnvT9vKitcn5t8vyI-KaanFbG07NL-tw99Grf779KlFEYqWXpO61YEl4RKYV_2OrtwAkZkd7uhg7Wd92NRRE9NwXGbz37URd9czzOC49R3BSuM"/>
+<div class="hidden lg:flex flex-col">
+<span class="font-headline-sm text-[18px] font-bold text-primary leading-tight">JADER MENDEZ</span>
+<span class="font-label-md text-secondary uppercase tracking-wider text-[10px]">Talento Deportivo</span>
+</div>
+</a>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1" href="#">Inicio</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Disciplinas</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Galería</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Noticias</a>
+<button class="bg-primary text-on-primary px-stack-lg py-2 rounded-xl font-label-lg text-label-lg hover:opacity-90 transition-all active:scale-95">Contáctanos</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="mt-24">
+<!-- Hero Section -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 flex flex-col gap-stack-md">
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary">Excelencia Académica y Deportiva</span>
+<h1 class="font-display text-[48px] md:text-display leading-tight text-primary">Formando los <span class="italic">Líderes</span> del Deporte Nacional.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Impulsamos el potencial de nuestros jóvenes atletas a través de una formación integral de alto nivel, combinando el rigor académico con la disciplina olímpica.
+            </p>
+<div class="flex flex-wrap gap-stack-md mt-stack-sm">
+<button class="bg-primary text-on-primary px-stack-lg py-4 rounded-xl font-label-lg text-label-lg hover:opacity-90 transition-all shadow-lg shadow-primary/20">Explorar Disciplinas</button>
+<button class="border border-primary text-primary px-stack-lg py-4 rounded-xl font-label-lg text-label-lg hover:bg-primary/5 transition-all">Proceso de Selección</button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden rounded-xl border border-primary/5 shadow-2xl">
+<img alt="Instalaciones deportivas C.E.T.D." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKH0a5wkZu8GAdKTRweMU9Gb6HYJGXRD5GS4nFBUhfGEUccIEjLXpD-J3sFNMkZJvzWQTSQcQbac4yGZ6Pm2c6jcylDiU5mccydXm5EJov5gMh8hLXvdSI9uaN79tePpBEP-3rRb9YXhEwI1WEbyB6ejEP3KUaiNlk4FTEzJOrOU02rKkVNF7izPKXRmKHiIeIwExs0kWS8YhRkASjOwW6WV2QEd798qJl6m11V6liMFNuq8CzhFM6-DQOaKg8nTPqbzl-Cm5Kdko"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl border border-primary/10 shadow-xl hidden md:block max-w-[220px]">
+<p class="font-label-lg text-label-lg text-secondary">EST. 2004</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Portuguesa - Paéz. Cuna de campeones regionales y nacionales.</p>
+</div>
+</div>
+</section>
+<!-- Próximos Eventos Section (Updated to Calendar View) -->
+<section class="bg-white py-section-gap border-y border-primary/5" id="eventos">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-6xl mx-auto">
+<div class="mb-20 text-center">
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-[0.3em] mb-4 block">Agenda Oficial</span>
+<h2 class="font-display text-4xl md:text-5xl text-primary">Próximos Eventos</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Calendar View Column -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 rounded-xl border border-outline-variant/30">
+<div class="flex justify-between items-center mb-10">
+<h3 class="font-display text-4xl text-primary">Octubre</h3>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-2">
+<!-- Weekdays Header -->
+<div class="text-center font-label-md text-on-surface-variant py-2">Lu</div>
+<div class="text-center font-label-md text-on-surface-variant py-2">Ma</div>
+<div class="text-center font-label-md text-on-surface-variant py-2">Mi</div>
+<div class="text-center font-label-md text-on-surface-variant py-2">Ju</div>
+<div class="text-center font-label-md text-on-surface-variant py-2">Vi</div>
+<div class="text-center font-label-md text-on-surface-variant py-2">Sa</div>
+<div class="text-center font-label-md text-on-surface-variant py-2">Do</div>
+<!-- Day Cells (Dummy data for October) -->
+<div class="calendar-cell text-on-surface-variant/30 italic">30</div>
+<div class="calendar-cell">1</div>
+<div class="calendar-cell">2</div>
+<div class="calendar-cell">3</div>
+<div class="calendar-cell">4</div>
+<div class="calendar-cell">5</div>
+<div class="calendar-cell">6</div>
+<div class="calendar-cell">7</div>
+<div class="calendar-cell">8</div>
+<div class="calendar-cell">9</div>
+<div class="calendar-cell">10</div>
+<div class="calendar-cell">11</div>
+<div class="calendar-cell">12</div>
+<div class="calendar-cell">13</div>
+<div class="calendar-cell">14</div>
+<div class="calendar-cell has-event" onclick="showEvent(15)">15</div>
+<div class="calendar-cell">16</div>
+<div class="calendar-cell">17</div>
+<div class="calendar-cell has-event" onclick="showEvent(18)">18</div>
+<div class="calendar-cell">19</div>
+<div class="calendar-cell">20</div>
+<div class="calendar-cell">21</div>
+<div class="calendar-cell has-event" onclick="showEvent(22)">22</div>
+<div class="calendar-cell">23</div>
+<div class="calendar-cell">24</div>
+<div class="calendar-cell">25</div>
+<div class="calendar-cell">26</div>
+<div class="calendar-cell">27</div>
+<div class="calendar-cell">28</div>
+<div class="calendar-cell">29</div>
+<div class="calendar-cell">30</div>
+<div class="calendar-cell">31</div>
+<div class="calendar-cell text-on-surface-variant/30 italic">1</div>
+<div class="calendar-cell text-on-surface-variant/30 italic">2</div>
+<div class="calendar-cell text-on-surface-variant/30 italic">3</div>
+</div>
+</div>
+<!-- Event Detail Column -->
+<div class="lg:col-span-5 h-full">
+<div class="sticky top-32" id="event-detail-container">
+<div class="event-detail-card bg-primary text-on-primary p-10 rounded-xl shadow-2xl min-h-[400px] flex flex-col">
+<div class="flex-grow flex flex-col items-center justify-center text-center opacity-60" id="no-event-selected">
+<span class="material-symbols-outlined text-6xl mb-6">event_available</span>
+<p class="font-headline-sm">Selecciona un día destacado para ver detalles del evento.</p>
+</div>
+<div class="hidden flex-grow" id="event-details">
+<div class="mb-8">
+<span class="font-label-lg uppercase tracking-widest text-secondary-container" id="detail-date">15 OCTUBRE</span>
+<h3 class="font-display text-4xl mt-4 leading-tight" id="detail-title">Torneo Regional de Judo</h3>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1">location_on</span>
+<div>
+<p class="font-label-md text-on-primary/60 uppercase">Ubicación</p>
+<p class="font-body-lg" id="detail-location">Cancha Principal - Complejo Deportivo</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1">person</span>
+<div>
+<p class="font-label-md text-on-primary/60 uppercase">Coordinador</p>
+<p class="font-body-lg" id="detail-coordinator">Lic. Mario Rossi</p>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-10">
+<button class="w-full bg-on-primary text-primary py-4 rounded-lg font-label-lg hover:bg-secondary-container transition-colors">Confirmar Asistencia</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<a class="font-label-lg text-primary uppercase tracking-widest border-b-2 border-primary pb-2 hover:opacity-70 transition-opacity" href="#">Descargar Calendario Completo</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Nuestras Disciplinas Section -->
+<section class="bg-surface py-section-gap">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-section-gap">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Programas de Entrenamiento</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-stack-sm">Nuestras Disciplinas</h2>
+</div>
+<a class="hidden md:flex items-center gap-2 font-label-lg text-label-lg text-primary group" href="#">
+                    Ver Todo el Programa
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-gutter">
+<!-- Disciplina 1 -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden rounded-xl bg-surface-container-low border border-primary/5 mb-stack-md shadow-md">
+<img alt="Fútbol Sala" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUCyD1cpzo5LKvrfVJPyiLSCbI2OR3OKFh15caCnFoAhRZuwOUrLQCSuWvpBpXmvToSlv71had0sc65fRBmwyqphryQhxEnEDzlhRZb_98rWZPrwhOk0gsdRwjS-kt1US-mid2VTU3k3fX3r1nI0-H5UYGhBwLapTFlGQhJRXFQw_iq5Yzm8FkT7kG8-FCWSEZFkRqIwBhPITfave2MxkipwLToboy1SbvvC4lk6omDaJoDgSTV75SD6zKEseqqa5diF4jx25rHrc"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm">Fútbol Sala</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">Desarrollo técnico y táctico en cancha techada, enfocado en la agilidad y el juego en equipo bajo estándares profesionales.</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">sports_soccer</span>
+</div>
+</div>
+<!-- Disciplina 2 -->
+<div class="md:col-span-4 group cursor-pointer pt-0 md:pt-24">
+<div class="aspect-[1/1] overflow-hidden rounded-xl bg-surface-container-low border border-primary/5 mb-stack-md shadow-md">
+<img alt="Atletismo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5eoC_QvXZstFwAb6p7abcV1orlYZnz_HwgmG6ut2ZpCk3FqOR0CR2Pn7lrTZVXP6--bxVeAyNSUONRovv531ReZV4wVBMC8Og0BJIG9maCQ4kIG2lxguWbiLVoZuLDxiHeJIo12WJyOrRznrqNHFTViiLdZ8Gsl8prQRpPVgjOydR12I_u2I0KqNXqd1EGLe2ASvskbhi3zAadk5u_XaebyM4NUJGalljBJEZfdk_ECLALRTG8kAlY_-aUFy-Ifm0XGZq0OSEABE"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm">Atletismo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Pruebas de pista y campo. Formando la base física de nuestros atletas olímpicos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Noticias Deportivas Section -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="text-center mb-section-gap">
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Actualidad Jader Mendez</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-stack-sm">Noticias Deportivas</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Noticia 1 -->
+<article class="flex flex-col group">
+<div class="mb-stack-md overflow-hidden rounded-xl border border-primary/10 aspect-video shadow-sm">
+<img alt="Ajedrez institucional" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPJYAM7fk8XEjiqtgKiAW1_qEb1Apjel-NvNQxcYQpSKvn6ikF8ScIPAMuP5PIHc-6x6s3F01fX7u_0cZkX-PzKAI4rJr87_by7j-etzjnPqIR1ghdkaQlXrskx3IUl7NXY47wIWNZ0y_0hVp4FJ9XbFsSVxnsB6Py-wnY___HCrXzMX8jnl22-AbbiQKg0HATnNsvYxLIcvxlQOPDGO8N5KC0iSuaienMVBYp5I8YhuIpmZcEenB4wGksrbBeNZJXh173Zx181VU"/>
+</div>
+<div class="flex items-center gap-stack-sm mb-2">
+<span class="font-label-lg text-label-lg uppercase text-primary">Ajedrez</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">24 OCT, 2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm group-hover:text-primary transition-colors">Estrategia y Mente: Torneo Regional</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm line-clamp-3">Nuestros estudiantes destacan en la fase clasificatoria de ajedrez, demostrando que el deporte también es mental.</p>
+<a class="mt-4 font-label-lg text-label-lg text-primary flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                    Leer Noticia <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</article>
+<!-- Noticia 2 -->
+<article class="flex flex-col group">
+<div class="mb-stack-md overflow-hidden rounded-xl border border-primary/10 aspect-video shadow-sm">
+<img alt="Lucha libre" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUCHJGAochu5eXzwBr1dWDtraFbveJdsU0Hnw5D95yyxnvc3a-B06--8FrYRKsV6Pq48MDpd5Qe4G4jbWg6tvptEuTsk6ZdhiayQQ1n15AvjjxkgETJnZogRNhCa-OxF7Glpe2EbeBKnlfaEiXYom3kvH--9MSAsdiN5YZZSm7yAX3HDwFfw8KIIwnOH7uLlrWCYz8fQlyzRibNVlaTpfksIygLn_hsfaZFSlcH403CyHoS0XqQRbWpjZtNop6ASFLbArJPedGg70"/>
+</div>
+<div class="flex items-center gap-stack-sm mb-2">
+<span class="font-label-lg text-label-lg uppercase text-primary">Lucha</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">18 OCT, 2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm group-hover:text-primary transition-colors">Oro en Lucha Estilo Libre</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm line-clamp-3">Crónica de la victoria de nuestro equipo de lucha en el campeonato nacional juvenil celebrado este fin de semana.</p>
+<a class="mt-4 font-label-lg text-label-lg text-primary flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                    Leer Noticia <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</article>
+<!-- Noticia 3 -->
+<article class="flex flex-col group">
+<div class="mb-stack-md overflow-hidden rounded-xl border border-primary/10 aspect-video shadow-sm">
+<img alt="Judo entrenamiento" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVn3vnsdCOgY8SL7ryZjF95cwWIp5fdBG-bZ2oGOpAFCjJcRi4xjM35DLIRiUonVyaDFFN8T3J58Go0OXUMqnWLwREJQ2DAmooTfc0p45i2hD7a4qQVPk_D9qhleug2sTRcXw7kowZl1hMHncw4nMwvXufhPIuCwPAYkiIJWlQk8XL8LtCxYqsex8sAakmhBQYizHUlhKQSanecebXBu0civuHuH0UvTNklO5xGqNX_fb48OXj0Kv20ApFc4t_HpowL4Bppy3PPDk"/>
+</div>
+<div class="flex items-center gap-stack-sm mb-2">
+<span class="font-label-lg text-label-lg uppercase text-primary">Judo</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">12 OCT, 2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm group-hover:text-primary transition-colors">Técnica de Judo: Seminario Avanzado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm line-clamp-3">Recibimos a expertos nacionales para un taller intensivo sobre técnicas de proyección y control en el dojo.</p>
+<a class="mt-4 font-label-lg text-label-lg text-primary flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                    Leer Noticia <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+</article>
+</div>
+<div class="mt-section-gap flex justify-center">
+<button class="border border-primary text-primary px-12 py-4 rounded-xl font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-all">Ver Todas las Noticias</button>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="bg-primary py-24">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary">El Resumen Semanal</h2>
+<p class="font-body-lg text-body-lg text-on-primary/70 mt-stack-md max-w-md">Suscríbete para recibir los resultados de nuestras competencias, calendarios académicos y noticias de admisiones.</p>
+</div>
+<div class="flex flex-col gap-4">
+<form class="flex flex-col md:flex-row gap-4">
+<input class="bg-white/10 border-none text-white rounded-xl px-6 py-4 flex-grow placeholder:text-white/50 focus:ring-2 focus:ring-secondary" placeholder="Tu correo electrónico" type="email"/>
+<button class="bg-secondary text-on-secondary px-stack-lg py-4 rounded-xl font-label-lg text-label-lg hover:opacity-90 transition-opacity">Suscribirse</button>
+</form>
+<p class="font-label-md text-label-md text-on-primary/50">Formando campeones desde 2004.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section class="bg-surface-container-low py-section-gap border-t border-primary/5" id="inscripcion">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-4xl mx-auto text-center mb-16">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest mb-4 block">Admisiones 2024-2025</span>
+<h2 class="font-display text-4xl md:text-5xl text-primary">Inicia tu Camino al Éxito</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-6">Completa tu solicitud de inscripción y únete a la próxima generación de líderes deportivos en Venezuela.</p>
+</div>
+<form class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-sm border border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-stack-md">
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-primary" for="full-name">Nombre Completo</label>
+<input class="bg-background border-outline-variant/50 focus:ring-primary focus:border-primary rounded-lg py-3 px-4" id="full-name" placeholder="Nombre y Apellido" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-primary" for="id-number">Cédula de Identidad</label>
+<input class="bg-background border-outline-variant/50 focus:ring-primary focus:border-primary rounded-lg py-3 px-4" id="id-number" placeholder="V-00.000.000" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-primary" for="dob">Fecha de Nacimiento</label>
+<input class="bg-background border-outline-variant/50 focus:ring-primary focus:border-primary rounded-lg py-3 px-4" id="dob" type="date"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-primary" for="discipline">Disciplina Deportiva</label>
+<select class="bg-background border-outline-variant/50 focus:ring-primary focus:border-primary rounded-lg py-3 px-4" id="discipline">
+<option value="">Selecciona una disciplina</option>
+<option value="futbol">Fútbol Sala</option>
+<option value="atletismo">Atletismo</option>
+<option value="judo">Judo</option>
+<option value="ajedrez">Ajedrez</option>
+<option value="lucha">Lucha Estilo Libre</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-lg text-primary" for="parent-contact">Contacto del Representante</label>
+<input class="bg-background border-outline-variant/50 focus:ring-primary focus:border-primary rounded-lg py-3 px-4" id="parent-contact" placeholder="Teléfono o Correo Electrónico" type="text"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-lg text-primary" for="medical-info">Información Médica / Observaciones</label>
+<textarea class="bg-background border-outline-variant/50 focus:ring-primary focus:border-primary rounded-lg py-3 px-4" id="medical-info" placeholder="Alergias, condiciones previas o comentarios adicionales..." rows="4"></textarea>
+</div>
+</div>
+<div class="mt-10">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-lg text-label-lg hover:opacity-90 transition-all shadow-lg shadow-primary/20" type="submit">
+          Enviar Solicitud
+        </button>
+<p class="text-center font-label-md text-on-surface-variant/60 mt-4">Al enviar este formulario, confirmas que la información proporcionada es verídica.</p>
+</div>
+</form>
+</div>
+</section><footer class="bg-surface border-t border-primary/10 w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto gap-stack-md">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-headline-sm text-headline-sm text-primary">C.E.T.D. JADER MENDEZ</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Portuguesa-Paéz, Venezuela. Todos los derechos reservados.</p>
+</div>
+<div class="flex gap-stack-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Términos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">rss_feed</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+    const eventsData = {
+        15: {
+            title: "Torneo Regional de Judo",
+            date: "15 Octubre",
+            location: "Cancha Principal - Complejo Deportivo",
+            coordinator: "Lic. Mario Rossi"
+        },
+        18: {
+            title: "Encuentro de Atletismo",
+            date: "18 Octubre",
+            location: "Pista de Atletismo Jader Mendez",
+            coordinator: "Lic. Juana Díaz"
+        },
+        22: {
+            title: "Torneo de Ajedrez",
+            date: "22 Octubre",
+            location: "Salón de Usos Múltiples",
+            coordinator: "Lic. Mario Rossi"
+        }
+    };
+
+    function showEvent(day) {
+        const data = eventsData[day];
+        if (!data) return;
+
+        const detailEl = document.getElementById('event-details');
+        const emptyEl = document.getElementById('no-event-selected');
+        
+        // Populate data
+        document.getElementById('detail-date').innerText = data.date;
+        document.getElementById('detail-title').innerText = data.title;
+        document.getElementById('detail-location').innerText = data.location;
+        document.getElementById('detail-coordinator').innerText = data.coordinator;
+
+        // UI Transition
+        emptyEl.classList.add('hidden');
+        detailEl.classList.remove('hidden');
+        
+        // Highlight active cell (visual cue)
+        document.querySelectorAll('.calendar-cell').forEach(cell => {
+            cell.classList.remove('ring-4', 'ring-secondary-container', 'ring-offset-2');
+        });
+        const activeCell = Array.from(document.querySelectorAll('.calendar-cell')).find(el => el.innerText == day && el.classList.contains('has-event'));
+        if (activeCell) {
+            activeCell.classList.add('ring-4', 'ring-secondary-container', 'ring-offset-2');
+        }
+    }
+
+    // Smooth reveal interaction for other sections
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('article, .group, .calendar-cell, #event-detail-container').forEach(el => {
+        if (!el.classList.contains('calendar-cell')) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            observer.observe(el);
+        }
+    });
+</script>
+</body></html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Configuración - C.E.T.D. Jader Mendez</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-headline-lg { font-family: 'Playfair Display', serif; }
+        .font-headline-md { font-family: 'Playfair Display', serif; }
+        .font-headline-sm { font-family: 'Playfair Display', serif; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #c6c6cd; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #76777d; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#191c1e",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "secondary": "#006c49",
+                      "tertiary-fixed": "#d3e4fe",
+                      "primary-fixed": "#dae2fd",
+                      "primary": "#000000",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e0e3e5",
+                      "outline": "#76777d",
+                      "secondary-container": "#6cf8bb",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "tertiary-container": "#0b1c30",
+                      "surface-dim": "#d8dadc",
+                      "outline-variant": "#c6c6cd",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#7c839b",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#f7f9fb",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "on-surface-variant": "#45464d",
+                      "inverse-primary": "#bec6e0",
+                      "surface": "#f7f9fb",
+                      "surface-variant": "#e0e3e5",
+                      "on-secondary-container": "#00714d",
+                      "on-error-container": "#93000a",
+                      "on-background": "#191c1e",
+                      "surface-tint": "#565e74",
+                      "secondary-fixed-dim": "#4edea3",
+                      "inverse-surface": "#2d3133",
+                      "inverse-on-surface": "#eff1f3",
+                      "background": "#f7f9fb",
+                      "surface-container": "#eceef0",
+                      "secondary-fixed": "#6ffbbe",
+                      "surface-container-high": "#e6e8ea",
+                      "on-secondary-fixed": "#002113",
+                      "on-tertiary-container": "#75859d",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "tertiary": "#000000",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-container-low": "#f2f4f6",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#131b2e",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "3rem",
+                      "margin-desktop": "5rem",
+                      "gutter": "2rem",
+                      "stack-sm": "0.5rem",
+                      "section-gap": "8rem",
+                      "margin-mobile": "1.5rem",
+                      "stack-md": "1.5rem"
+              },
+              "fontFamily": {
+                      "label-lg": ["Hanken Grotesk"],
+                      "headline-lg": ["Playfair Display"],
+                      "label-md": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "display": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "body-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar - External Context Shell -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-5 md:px-margin-desktop h-16 bg-white/90 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center gap-4">
+<span class="font-display text-headline-sm font-bold text-primary">Jader Mendez</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-surface-container rounded-full border-none text-body-md focus:ring-1 focus:ring-secondary w-64" placeholder="Buscar configuración..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-secondary transition-colors" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-secondary transition-colors" data-icon="help">help</button>
+<img alt="Avatar del Administrador" class="w-8 h-8 rounded-full border border-outline-variant" data-alt="A professional studio portrait of a high-level administrator with a welcoming yet authoritative expression. The individual is dressed in modern business attire, and the background is a soft-focus office environment with elegant, neutral lighting. The visual style is crisp and clean, aligning with a corporate minimalist design system with a high-key light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNcrosQAfOk-DjBvKBaVYPGJMjvcutsaO87WXS6LmHRF2Ymt4TgeI1gGrIlDlC11rmDitNwHv9ucgL6D_ZVra2SMFFEMG2QIBCAi8BtbTFEjYuwHA2aI7bmdrChVEYZ2iB_mBfIvxmG8MG0AYCF90Fl8Q-DTyAor1pgAwhQbs-RTxsY7AuXcnLO1zCw6DVx8C6AflmbNeq_PPKek2VbfW08rezYe9-jSuylCT6wF3bRuT6bnns1YtzI_304vTmyMpsOL9iRKBsrsU"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-20 pb-8 px-4 bg-surface border-r border-primary/10 w-64 hidden md:flex">
+<div class="mb-8 px-2">
+<h2 class="font-display text-headline-sm text-primary">C.E.T.D.</h2>
+<p class="font-body-md text-on-surface-variant">Jader Mendez</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Resumen</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="perm_media">perm_media</span>
+<span class="font-label-lg text-label-lg">Contenido</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-label-lg text-label-lg">Comentarios</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-secondary font-bold bg-secondary/5 border-r-4 border-secondary translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg text-label-lg">Configuración</span>
+</a>
+</nav>
+<div class="mt-auto px-2">
+<button class="flex items-center gap-3 w-full text-left text-on-surface-variant hover:text-error transition-colors font-label-lg text-label-lg">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Cerrar Sesión
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-24 md:pl-72 pr-5 md:pr-margin-desktop pb-20">
+<!-- Header Section -->
+<header class="mb-stack-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Configuración</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Administra los parámetros críticos del sistema, gestiona el equipo de trabajo y define los niveles de acceso institucional.</p>
+</div>
+<button class="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-lg font-label-lg text-label-lg hover:brightness-110 transition-all shadow-sm active:scale-95" onclick="openModal()">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+                    Añadir Administrador
+                </button>
+</div>
+</header>
+<!-- Configuration Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- User Management Section (Bento Style) -->
+<section class="lg:col-span-12 xl:col-span-8 space-y-gutter">
+<div class="bg-white border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="group">group</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Gestión de Usuarios y Roles</h2>
+</div>
+<span class="font-label-md text-label-md bg-secondary/10 text-secondary px-3 py-1 rounded-full">3 Administradores Activos</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low border-b border-surface-variant">
+<tr>
+<th class="px-6 py-4 font-label-lg text-label-lg text-on-surface-variant">Nombre Completo</th>
+<th class="px-6 py-4 font-label-lg text-label-lg text-on-surface-variant">Correo Electrónico</th>
+<th class="px-6 py-4 font-label-lg text-label-lg text-on-surface-variant">Rol</th>
+<th class="px-6 py-4 font-label-lg text-label-lg text-on-surface-variant text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">AM</div>
+<span class="font-body-md text-body-md font-semibold">Ana Maria Jimenez</span>
+</div>
+</td>
+<td class="px-6 py-5 font-body-md text-body-md text-on-surface-variant">ana.jimenez@cetd.edu</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-highest rounded text-label-md font-medium">Directora</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 hover:bg-secondary/10 rounded-full transition-colors text-on-surface-variant hover:text-secondary"><span class="material-symbols-outlined text-sm" data-icon="edit">edit</span></button>
+<button class="p-2 hover:bg-error/10 rounded-full transition-colors text-on-surface-variant hover:text-error"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs">RG</div>
+<span class="font-body-md text-body-md font-semibold">Ricardo Galvis</span>
+</div>
+</td>
+<td class="px-6 py-5 font-body-md text-body-md text-on-surface-variant">r.galvis@cetd.edu</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-highest rounded text-label-md font-medium">Coordinador</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 hover:bg-secondary/10 rounded-full transition-colors text-on-surface-variant hover:text-secondary"><span class="material-symbols-outlined text-sm" data-icon="edit">edit</span></button>
+<button class="p-2 hover:bg-error/10 rounded-full transition-colors text-on-surface-variant hover:text-error"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-xs">JM</div>
+<span class="font-body-md text-body-md font-semibold">Javier Morales</span>
+</div>
+</td>
+<td class="px-6 py-5 font-body-md text-body-md text-on-surface-variant">j.morales@cetd.edu</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-highest rounded text-label-md font-medium">Profesor de Deportes</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 hover:bg-secondary/10 rounded-full transition-colors text-on-surface-variant hover:text-secondary"><span class="material-symbols-outlined text-sm" data-icon="edit">edit</span></button>
+<button class="p-2 hover:bg-error/10 rounded-full transition-colors text-on-surface-variant hover:text-error"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- System Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-white border border-primary/10 p-6 rounded-xl flex items-start gap-4">
+<div class="p-3 bg-secondary/10 rounded-lg text-secondary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase mb-1">Estado de Seguridad</h3>
+<p class="font-body-md text-body-md">Todos los protocolos SSL activos. Última auditoría realizada hace 48 horas.</p>
+</div>
+</div>
+<div class="bg-white border border-primary/10 p-6 rounded-xl flex items-start gap-4">
+<div class="p-3 bg-tertiary-container/10 text-tertiary-container rounded-lg">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase mb-1">Sincronización Cloud</h3>
+<p class="font-body-md text-body-md">Respaldo automático completado hoy a las 04:00 AM (98GB total).</p>
+</div>
+</div>
+</div>
+</section>
+<!-- System Settings (Side Bar Settings) -->
+<aside class="lg:col-span-12 xl:col-span-4 space-y-gutter">
+<div class="bg-white border border-primary/10 rounded-xl p-6 shadow-sm">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6">Ajustes del Sistema</h2>
+<div class="space-y-6">
+<!-- General Settings Item -->
+<div class="group cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary" data-icon="settings_applications">settings_applications</span>
+<span class="font-label-lg text-label-lg">Ajustes Generales</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<p class="text-label-md text-on-surface-variant pl-9">Nombre de la institución, idioma y zona horaria.</p>
+</div>
+<!-- Notification Settings Item -->
+<div class="group cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary" data-icon="notifications_active">notifications_active</span>
+<span class="font-label-lg text-label-lg">Notificaciones</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<p class="text-label-md text-on-surface-variant pl-9">Alertas por correo, push web y resúmenes semanales.</p>
+</div>
+<!-- Security Settings Item -->
+<div class="group cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary" data-icon="encrypted">encrypted</span>
+<span class="font-label-lg text-label-lg">Seguridad</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<p class="text-label-md text-on-surface-variant pl-9">Autenticación 2FA, logs de acceso y firewall.</p>
+</div>
+</div>
+<hr class="my-8 border-surface-variant"/>
+<div class="p-4 bg-surface-container rounded-lg border border-outline-variant/20">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="info">info</span>
+<span class="font-label-md text-label-md text-primary uppercase">Nota Administrativa</span>
+</div>
+<p class="text-label-md text-on-surface-variant">Los cambios en los roles de administrador pueden tardar hasta 5 minutos en propagarse por todo el sistema.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Modal for New Administrator -->
+<div class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4" id="adminModal">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" onclick="closeModal()"></div>
+<div class="bg-white rounded-xl w-full max-w-xl shadow-2xl relative z-10 overflow-hidden animate-in fade-in zoom-in duration-300">
+<div class="p-6 border-b border-surface-variant flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-primary">Añadir Nuevo Administrador</h3>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error transition-colors" data-icon="close" onclick="closeModal()">close</button>
+</div>
+<form class="p-6 space-y-5">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">Nombre Completo</label>
+<input class="w-full border-surface-variant rounded-lg focus:ring-secondary focus:border-secondary font-body-md p-3" placeholder="Ej. Mariana Valderrama" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">Correo Electrónico Corporativo</label>
+<input class="w-full border-surface-variant rounded-lg focus:ring-secondary focus:border-secondary font-body-md p-3" placeholder="m.valderrama@cetd.edu" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">Selección de Rol</label>
+<select class="w-full border-surface-variant rounded-lg focus:ring-secondary focus:border-secondary font-body-md p-3">
+<option value="directora">Directora</option>
+<option value="coordinador">Coordinador</option>
+<option value="profesor">Profesor de Deportes</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">Acceso Inicial</label>
+<select class="w-full border-surface-variant rounded-lg focus:ring-secondary focus:border-secondary font-body-md p-3">
+<option value="full">Acceso Total</option>
+<option value="view">Solo Lectura</option>
+</select>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant/30 rounded-lg">
+<h4 class="font-label-lg text-label-lg text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                        Resumen de Permisos
+                    </h4>
+<p class="text-label-md text-on-surface-variant">El usuario tendrá capacidad para editar contenido, gestionar inscripciones y visualizar analíticas financieras del departamento asignado.</p>
+</div>
+<div class="flex justify-end gap-3 pt-4">
+<button class="px-6 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-variant transition-all" onclick="closeModal()" type="button">Cancelar</button>
+<button class="bg-primary text-white px-8 py-2 rounded-lg font-label-lg text-label-lg hover:brightness-110 active:scale-95 transition-all" type="submit">Crear Perfil</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Mobile Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-primary/10 flex md:hidden justify-around items-center h-16 px-4 z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-label-md">Resumen</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="perm_media">perm_media</span>
+<span class="text-[10px] font-label-md">Contenido</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="text-[10px] font-label-md">Chats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-label-md">Config</span>
+</a>
+</nav>
+<script>
+        function openModal() {
+            const modal = document.getElementById('adminModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('adminModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on Escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body></html>
